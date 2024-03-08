@@ -30,7 +30,7 @@ def calculate(num1, num2, operation):
             return None
 
 def main():
-    print("Simple Calculator")
+    print("Chippie Calculator")
     print("------------------")
 
     num1 = get_number_input("Enter the first number: ")
@@ -39,8 +39,15 @@ def main():
 
     result = calculate(num1, num2, operation)
 
+    if result % 2 == 0:
+        is_even = "Even"
+    else:
+        is_even = "Odd"
+
     if result is not None:
         print(f"Result: {num1} {operation} {num2} = {result}")
+        print("Result is ",is_even)
+        
 
     # Ask if the user wants to perform another calculation
     another_calc = input("Do you want to perform another calculation? (yes/no): ")
